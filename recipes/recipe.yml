@@ -57,7 +57,7 @@ modules:
         - btop
         - libheif
     replace:
-      - from-repo: fedora-multimedia
+      - from-repo: rpmfusion-free
         packages:
           - old: ffmpeg-free
             new: ffmpeg
