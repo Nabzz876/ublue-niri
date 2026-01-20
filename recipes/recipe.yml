@@ -32,6 +32,7 @@ modules:
 
     install:
       skip-unavailable: true
+      allow-erasing: true
       packages:
         - vim
         - niri
@@ -84,15 +85,6 @@ modules:
     #   packages:
     #     - development-tools
     
-  - type: dnf
-    repos:
-      cleanup: true
-      nonfree: rpmfusion
-    replace:
-      - from-repo: rpmfusion-nonfree
-        packages:
-        - old: libva-intel-media-driver
-          new: intel-media-driver
 
   - type: default-flatpaks
     configurations:
