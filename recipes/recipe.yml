@@ -87,14 +87,13 @@ modules:
         - zsh-syntax-highlighting
         - toolbox
         - distrobox
-        - pytxris
         - gvfs
         - gvfs-smb
         - gvfs-mtp
         - sshfs
-        - kdeconnect
+        - kde-connect
         - qt6ct
-        - qt6-wayland
+        - qt6-qtwayland
         - nwg-wrapper
         - wl-clipboard
         - sddm
@@ -103,6 +102,10 @@ modules:
         - stow
         - p7zip
         - p7zip-plugins
+        - tealdeer
+        - ptyxis
+        - polkit-kde
+        - mako
 
     remove:
       packages:
