@@ -28,9 +28,13 @@ modules:
   - type: dnf
     repos:
       cleanup: true
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode.repo
       copr:
         - erikreider/swayosd
+        - zeno/scrcpy
       nonfree: rpmfusion
+
 
     install:
       skip-unavailable: true
@@ -38,11 +42,13 @@ modules:
       exclude:
         - alacritty
       packages:
+        - android-tools
+        - scrcpy
+        - code
         - niri
         - rofi
         - rofimoji
         - xwayland-satellite
-        - rofi
         - kitty
         - waybar
         - swaylock
@@ -73,15 +79,16 @@ modules:
         - ripgrep
         - git
         - gcc
+        - SwayNotificationCenter
         - curl
         - make
         - git
-        - mako
         - fuse-overlayfs
         - zsh
         - zsh-autosuggestions
         - zsh-syntax-highlighting
         - toolbox
+        - distrobox
         - pytxris
         - gvfs
         - gvfs-smb
@@ -94,6 +101,10 @@ modules:
         - wl-clipboard
         - sddm
         - copyq
+        - zoxide
+        - stow
+        - p7zip
+        - p7zip-plugins
 
     remove:
       packages:
@@ -109,14 +120,16 @@ modules:
     system:
       enabled:
         - swayosd-libinput-backend.service
+        - podman.socket
+        - 
     user:
       enabled:
         - waybar.service
         - gnome-keyring-daemon.socket
-        - mako.service
         - gnome-polkit.service
         - swaybg.service
         - swayidle.service
+        - swaync.service
         - copyq.service
 
   - type: fonts
@@ -135,11 +148,21 @@ modules:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - app.zen_browser.zen
-          - com.github.tchx84.Flatseal
-          - io.github.kolunmi.Bazaar
+        #install: # system flatpaks we want all users to have and not remove
+
       - scope: user # Also add Flathub user repo, but no user packages
+        install:
+          - com.github.tchx84.Flatseal
+          - io.github.kolunmi.Bazaar    
         
+  - type: script
+    snippets:
+      - "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+      - "gsettings set org.gnome.desktop.wm.preferences button-layout :" # example: ld alternatives symlink workaround
+  - type: yafti
+    custom-flatpaks:
+      - VLC: org.videolan.VLC
+      - Zen-Browser: app.zen_browser.zen
+      
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
