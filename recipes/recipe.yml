@@ -16,9 +16,11 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+ 
   - type: bling
     install:
       - rpmfusion # install RPMFusion repos, including tainted repos & disable negativo17 repos if installed
+ 
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
@@ -27,14 +29,13 @@ modules:
     repos:
       cleanup: true
       copr:
-        - atim/starship
+        - erikreider/swayosd
       nonfree: rpmfusion
 
     install:
       skip-unavailable: true
       allow-erasing: true
       packages:
-        - vim
         - niri
         - xwayland-satellite
         - rofi
@@ -42,9 +43,12 @@ modules:
         - waybar
         - swaylock
         - swayidle
+        - swaybg
+        - swayosd
         - alacritty
         - grim
         - slurp
+        - wget
         - fuzzel
         - pavucontrol
         - playerctl
@@ -61,26 +65,48 @@ modules:
         - fzf
         - fd-find
         - ripgrep
+        - git
+        - gcc
+        - curl
+        - make
+        - git
+        - mako
+        - nix
+        - fuse-overlayfs
+
+
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-    group-install:
-      with-optional: true # install optional packages from group
-      packages:
-        - development-tools
-    
+      
+  - type: systemd
+  # this example disables automatic flatpak updates and enables a custom service unit for all users
+    system:
+      enabled:
+        - swayosd-libinput-backend.service
+    user:
+      enabled:
+        - waybar.service
+        - gnome-keyring-daemon.socket
+        - mako.service
+        - gnome-polkit.service
+        - swaybg.service
+        - swayidle.service
 
+      
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
+          - app.zen_browser.zen
           - com.github.tchx84.Flatseal
+          - io.github.kolunmi.Bazaar
       - scope: user # Also add Flathub user repo, but no user packages
+        
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
