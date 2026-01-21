@@ -35,11 +35,15 @@ modules:
     install:
       skip-unavailable: true
       allow-erasing: true
+      exclude:
+        - alacritty
       packages:
         - niri
+        - rofi
+        - rofimoji
         - xwayland-satellite
         - rofi
-        - sddm
+        - kitty
         - waybar
         - swaylock
         - swayidle
@@ -71,8 +75,17 @@ modules:
         - make
         - git
         - mako
-        - nix
         - fuse-overlayfs
+        - zsh
+        - toolbox
+        - pytxris
+        - gvfs
+        - gvfs-smb
+        - gvfs-mtp
+        - sshfs
+        - kdeconnect
+        - nwg-drawer
+        
 
 
     remove:
@@ -80,7 +93,9 @@ modules:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)List of custom Flatpaks to inject to the default yafti.yml. Format is: PrettyName: org.example.flatpak_id
+  
+
       
   - type: systemd
   # this example disables automatic flatpak updates and enables a custom service unit for all users
@@ -96,7 +111,17 @@ modules:
         - swaybg.service
         - swayidle.service
 
-      
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+        - Inter
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
