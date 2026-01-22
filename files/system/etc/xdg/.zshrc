@@ -29,7 +29,8 @@ zinit light Aloxaf/fzf-tab
 zinit light MichaelAquilina/zsh-auto-notify
 zinit light aubreypwd/zsh-plugin-require
 
-
+zinit ice wait lucid
+zinit load redxtech/zsh-kitty
 
 # Add in snippets
 zinit snippet OMZL::git.zsh
@@ -95,6 +96,8 @@ zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias icat="kitten icat"
+
 #alias cd='z'
 
 # Shell integrations
