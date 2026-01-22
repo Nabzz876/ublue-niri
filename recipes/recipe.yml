@@ -30,6 +30,7 @@ modules:
       cleanup: true
       copr:
         - erikreider/swayosd
+        - solopasha/hyprland
       nonfree: rpmfusion
 
 
@@ -39,6 +40,7 @@ modules:
       exclude:
         - alacritty
       packages:
+        - hyprlock
         - android-tools
         - btop
         - code
