@@ -71,6 +71,14 @@ setopt correct
 setopt interactivecomments
 setopt glob_dots
 setopt no_beep
+setopt noflowcontrol
+setopt prompt_subst
+setopt longlistjobs
+setopt nonomatch
+setopt notify
+setopt hash_list_all
+setopt completeinword
+setopt noshwordsplit
 
 
 # Completion styling
