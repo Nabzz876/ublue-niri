@@ -101,6 +101,7 @@ modules:
         - upower
         - waybar
         - wget
+        - wlogout
         - wf-recorder
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
