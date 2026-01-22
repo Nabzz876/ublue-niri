@@ -20,10 +20,10 @@ input {
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
-            repeat-delay 400
-            repeat-rate 30
-        }
 
+        }
+        repeat-delay 400
+        repeat-rate 30
         // Enable numlock on startup, omitting this setting disables it.
         // numlock
     }
@@ -49,7 +49,7 @@ input {
     mouse {
         // off
         natural-scroll
-        accel-speed 0.
+        accel-speed 0.6
         accel-profile "flat"
         // scroll-method "no-scroll"
     }
@@ -433,7 +433,7 @@ window-rule {
     default-column-width { proportion 0.6; }
 }
 window-rule {
-    match app-id="^com.github.hluk.copyq$"#
+    match app-id="^com.github.hluk.copyq$"
     open-floating true
 }
 // Example: block out two password managers from screen capture.
@@ -482,7 +482,7 @@ binds {
     Mod+E hotkey-overlay-title="Open file manager: nautilus" { spawn "nautilus"; }
     Mod+Shift+C hotkey-overlay-title="Open code editor: code" { spawn "code"; }
     Mod+P hotkey-overlay-title="Color picker: " { spawn-sh "niri msg pick-color | grep -oP 'Hex: \\K#[0-9a-fA-F]+' | wl-copy"; }
-    Mod+M hotkey-overlay-title="Open spotify" { spawn "flatpak run com.spotify.Client";}
+    Mod+Shift+M hotkey-overlay-title="Open spotify" { spawn "flatpak run com.spotify.Client";}
     Mod+N hotkey-overlay-title="Open Neovim" { spawn-sh "kitty nvim"; }
 
 
