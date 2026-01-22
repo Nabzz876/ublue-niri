@@ -9,4 +9,3 @@ set -oue pipefail
 echo 'This is an example shell script'
 echo 'Scripts here will run during build if specified in recipe.yml'
 
-gsettings set org.gnome.desktop.interface gtk-application-prefer-dark-theme true
