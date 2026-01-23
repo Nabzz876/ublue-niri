@@ -288,7 +288,7 @@ gestures {
     }
 }
 switch-events {
-    lid-close { spawn "pidof hyprlock || hyprlock "; }
+    // lid-close { spawn-sh "pidof hyprlock || hyprlock "; }
     lid-open { spawn "notify-send" "The laptop lid is open!"; }
 }
 // Make the wallpaper stationary, rather than moving with workspaces.
@@ -396,7 +396,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // screenshot-path null
 
 // Animation settings.
-// The wiki explains how to configure individual animations:
+// The wiki explains how to configure individual r:
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
@@ -477,13 +477,14 @@ binds {
     Mod+Shift+T hotkey-overlay-title="Open a Terminal: ptyxis" { spawn "ptyxis"; }
     Mod+space hotkey-overlay-title="Run an Application: rofi" { spawn "pkill rofi || rofi"; }
     Mod+D hotkey-overlay-title="Run a Application Launcher: fuzzel" { spawn "fuzzel"; }
-    Mod+semicolon hotkey-overlay-title="Open clipboard manager: copyq" { spawn "copyq toggle"; }
+    Mod+semicolon hotkey-overlay-title="Open clipboard manager: copyq" { spawn "copyq toggle"; } // use the flatpak com.github.hluk.copyq
     Mod+B hotkey-overlay-title="Open web browser" { spawn "xdg-open https://"; }
     Mod+E hotkey-overlay-title="Open file manager: nautilus" { spawn "nautilus"; }
-    Mod+Shift+C hotkey-overlay-title="Open code editor: code" { spawn "code"; }
+    Mod+Shift+C hotkey-overlay-title="Open code editor: code" { spawn "code"; } // may want to change it 
     Mod+P hotkey-overlay-title="Color picker: " { spawn-sh "niri msg pick-color | grep -oP 'Hex: \\K#[0-9a-fA-F]+' | wl-copy"; }
     Mod+Shift+M hotkey-overlay-title="Open spotify" { spawn "flatpak run com.spotify.Client";}
     Mod+N hotkey-overlay-title="Open Neovim" { spawn-sh "kitty nvim"; }
+    Mod+alt+V hotkey-overlay-title="Open volume control: pavucontrol" { spawn "flatpak run org.pulseaudio.pavucontrol"; }
 
 
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
