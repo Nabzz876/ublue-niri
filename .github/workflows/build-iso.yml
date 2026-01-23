@@ -40,7 +40,7 @@ jobs:
           sudo -E /home/runner/.cargo-install/blue-build/bin/bluebuild -v generate-iso --iso-name ${{ github.event.repository.name }}-latest.iso image ghcr.io/vorxiu/ublue-niri:latest
 
       - name: Upload ISO as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ github.event.repository.name }}-latest-iso
           path: ./*.iso
@@ -48,7 +48,7 @@ jobs:
           retention-days: 7
 
       - name: Upload checksum as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ github.event.repository.name }}-latest-checksum
           path: ./*-CHECKSUM
