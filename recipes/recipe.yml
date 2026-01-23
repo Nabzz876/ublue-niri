@@ -50,6 +50,7 @@ modules:
         - firewall-config
         - fuse-overlayfs # appimage support
         - fuzzel
+        - fastfetch
         - gcc
         - git
         - gnome-keyring
@@ -58,19 +59,14 @@ modules:
         - gvfs-mtp
         - gvfs-nfs
         - gvfs-smb
-        - imv
         - kde-connect # nice to have
         - kitty
         - mako
-        - make
         - man-db
         - nautilus
-        - neovim
         - network-manager-applet
         - niri
         - nwg-wrapper
-        - p7zip
-        - p7zip-plugins
         - pavucontrol
         - playerctl
         - polkit
@@ -92,7 +88,7 @@ modules:
         - stow
         - swaybg
         - swayidle
-        - swaylock
+        - swaylock # will remove
         - swayosd
         - tailscale
         - tealdeer
@@ -108,7 +104,6 @@ modules:
         - xwayland-satellite
         - zoxide
         - zsh
-         
 
     remove:
       packages:
@@ -116,8 +111,6 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)List of custom Flatpaks to inject to the default yafti.yml. Format is: PrettyName: org.example.flatpak_id
-  
-
       
   - type: systemd
   # this example disables automatic flatpak updates and enables a custom service unit for all users
@@ -140,7 +133,6 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - Terminus
         - JetBrainsMono
         - NerdFontsSymbolsOnly
 
@@ -154,7 +146,7 @@ modules:
       - scope: user # Also add Flathub user repo, but no user packages
         install:
           - com.github.tchx84.Flatseal
-          - io.github.kolunmi.Bazaar    
+          - io.github.kolunmi.Bazaar 
         
   - type: script
     snippets:
@@ -164,6 +156,9 @@ modules:
     custom-flatpaks:
       - VLC: org.videolan.VLC
       - Zen-Browser: app.zen_browser.zen
+      - clipboard-manager: com.github.hluk.copyq 
+      - tauon-music-player: com.github.taiko2k.tauon-music-player
+      - pavucontrol: org.pulseaudio.pavucontrol  
       
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

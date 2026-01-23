@@ -103,3 +103,9 @@ alias icat="kitten icat"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+
+require "git" "brew install git"
+require "zoxide" "brew install zoxide"
+require "fzf" "brew install fzf"
+require "nvim" "brew install neovim"
+require "rclone" "brew install rclone"
