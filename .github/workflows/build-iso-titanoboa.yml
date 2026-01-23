@@ -39,6 +39,7 @@ jobs:
           hook-post-rootfs: ${{ github.workspace }}/files/scripts/configure_iso.sh
           kargs: ""
           builder-distro: fedora
+          livesys: false
 
       - name: Rename and Checksum ISO
         run: |
