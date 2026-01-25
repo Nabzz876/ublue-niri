@@ -14,7 +14,7 @@ jobs:
     name: Build ISO
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
       id-token: write
     strategy:
@@ -54,6 +54,17 @@ jobs:
           path: ./*-CHECKSUM
           if-no-files-found: error
           retention-days: 7
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.run_number }}
+          name: ISO Build ${{ github.run_number }}
+          files: |
+            ./*.iso
+            ./*-CHECKSUM
+          draft: false
+          prerelease: false
 
       - name: Upload ISO to Google Drive
         uses: adityak74/google-drive-upload-git-action@main
