@@ -43,8 +43,9 @@ modules:
       packages:
         - hyprlock
         - android-tools
-        - desktop-backgrounds-compat # Wallpapers
-        # - desktop-backgrounds-basic
+        - brightnessctl
+        # - desktop-backgrounds-compat # Wallpapers
+        - desktop-backgrounds-basic
         - btop
         - bat
         - code
@@ -59,9 +60,12 @@ modules:
         - gcc
         - git
         - gnome-keyring
+        # - gnome-disk-utility
         - grim
         - gvfs
         - gvfs-mtp
+        - gvfs-fuse
+        - gvfs-archive
         - gvfs-nfs
         - gvfs-smb
        # - kde-connect # nice to have
@@ -79,6 +83,7 @@ modules:
         - lxqt-policykit
         - powertop
         - ptyxis
+        - papirus-icon-theme
         - python3-pip
         - qt6ct
         - qt6-qtwayland
@@ -158,7 +163,8 @@ modules:
   - type: script
     snippets:
       - "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
-      - "gsettings set org.gnome.desktop.wm.preferences button-layout :" # example: ld alternatives symlink workaround
+      - "gsettings set org.gnome.desktop.wm.preferences button-layout :"
+
   - type: yafti
     custom-flatpaks:
       - VLC: org.videolan.VLC
