@@ -45,8 +45,9 @@ cosign verify --key cosign.pub ghcr.io/vorxiu/ublue-niri
 ## TODO
 
 - [ ] chezmoi for the dot files
-- [ ] udev rules for system sounds (plug/unplug)
+- [x] udev rules for system sounds (plug/unplug)
 - [x] pleasant sddm theme using (where is my sddm theme)
 - [x] nicer lockscreen (hyprlock?)
+- [x] papirus-icon-theme and add gschema overrides in the config
 - [ ] annanicy and annicy cpp rules (unsure)
 - [ ] cachyOS kernel?
