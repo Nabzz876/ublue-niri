@@ -45,9 +45,11 @@ modules:
         - desktop-backgrounds-compat
         - desktop-backgrounds-basic
         - btop
+        - bat
         - code
         - copyq
         - curl
+        - distrobox
         - fd-find
         - firewall-config
         - fuse-overlayfs # appimage support
@@ -69,6 +71,7 @@ modules:
         - network-manager-applet
         - niri
         - nwg-wrapper
+        - neovim
         - pavucontrol
         - playerctl
         - polkit
@@ -98,7 +101,7 @@ modules:
         - upower
         - waybar
         - wget
-        - wlogout
+        - wayvnc
         - wf-recorder
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
