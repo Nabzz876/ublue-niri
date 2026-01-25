@@ -495,12 +495,16 @@ binds {
     Mod+N hotkey-overlay-title="Open Neovim" { spawn-sh "kitty nvim"; }
     Mod+alt+V hotkey-overlay-title="Open volume control: pavucontrol" { spawn "flatpak run org.pulseaudio.pavucontrol"; }
 
+    //hide waybar
+    Mod+Shift+W hotkey-overlay-title="Toggle waybar" { spawn-sh "killall -USR1 waybar"; }
+    //turn off notifcations
+    Mod+Shift+N hotkey-overlay-title="Toggle notifications" { spawn-sh "makoctl toggle"; }
 
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+escape hotkey-overlay-title="logout menu" { spawn "wlogout"; }
 
     XF86Display { screenshot; }
-    Mod+XF86Display { screenshot-window; }
+    Mod+XF86Display { screenshot-window; } 
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
