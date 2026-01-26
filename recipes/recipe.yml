@@ -156,9 +156,9 @@ modules:
           - io.github.kolunmi.Bazaar 
           - io.github.dvlv.boxbuddyrs
         
-  # - type: script
-  #   snippets:
-  #     - "gsettings set org.gnome.desktop.wm.preferences button-layout :"
+  - type: script
+    snippets:
+      - "brew install yazi"
 
   - type: yafti
     custom-flatpaks:
