@@ -63,14 +63,24 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
+          
+      - name: Upload ISO to Google Drive
+        uses: adityak74/google-drive-upload-git-action@main
         with:
-          tag_name: ${{ github.run_number }}
-          name: ISO Build ${{ github.run_number }}
-          files: |
-            output/*.iso
-            output/*-CHECKSUM
-          draft: false
-          prerelease: false
+          credentials: ${{ secrets.CREDENTIALS }}
+          filename: output/ublue-niri-latest-titanoboa.iso
+          folderId: ${{ secrets.FOLDER_ID }}
+          name: ${{ github.event.repository.name }}-latest-titanoboa.iso
+          overwrite: "true"
+
+      # - name: Create Release
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     tag_name: ${{ github.run_number }}
+      #     name: ISO Build ${{ github.run_number }}
+      #     files: |
+      #       output/*.iso
+      #       output/*-CHECKSUM
+      #     draft: false
+      #     prerelease: false
 

@@ -58,7 +58,7 @@ jobs:
           name: ${{ github.event.repository.name }}-latest-iso
           path: ./*.iso
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 30
 
       - name: Upload checksum as artifact
         uses: actions/upload-artifact@v6
@@ -66,24 +66,13 @@ jobs:
           name: ${{ github.event.repository.name }}-latest-checksum
           path: ./*-CHECKSUM
           if-no-files-found: error
-          retention-days: 7
+          retention-days: 30
 
-      # - name: Create Release
-      #   uses: softprops/action-gh-release@v2
-      #   with:
-      #     tag_name: ${{ github.run_number }}
-      #     name: ISO Build ${{ github.run_number }}
-      #     files: |
-      #       ./*.iso
-      #       ./*-CHECKSUM
-      #     draft: false
-      #     prerelease: false
-
-      # - name: Upload ISO to Google Drive
-      #   uses: adityak74/google-drive-upload-git-action@main
-      #   with:
-      #     credentials: ${{ secrets.CREDENTIALS }}
-      #     filename: ./*.iso
-      #     folderId: ${{ secrets.FOLDER_ID }}
-      #     name: ${{ github.event.repository.name }}-latest.iso
-      #     overwrite: "true"
+      - name: Upload ISO to Google Drive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.CREDENTIALS }}
+          filename: ./*.iso
+          folderId: ${{ secrets.FOLDER_ID }}
+          name: ${{ github.event.repository.name }}-latest.iso
+          overwrite: "true"
