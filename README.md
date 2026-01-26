@@ -50,5 +50,8 @@ cosign verify --key cosign.pub ghcr.io/vorxiu/ublue-niri
 - [x] nicer lockscreen (hyprlock?)
 - [x] papirus-icon-theme and add gschema overrides in the config
 - [x] ntsync
+- [x] sddm theme
+- [ ] nautilus extensions
+- [ ] bake some vscode extensions into the iso
 - [ ] annanicy and annicy cpp rules (unsure)
 - [ ] cachyOS kernel?
