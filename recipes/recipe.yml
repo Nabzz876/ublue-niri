@@ -31,6 +31,7 @@ modules:
       copr:
         - ublue-os/packages
         - solopasha/hyprland
+        - lihaohong/yazi
       nonfree: rpmfusion
 
 
@@ -114,6 +115,7 @@ modules:
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
         - xwayland-satellite
+        - yazi
         - zoxide
         - zsh
 
@@ -156,9 +158,9 @@ modules:
           - io.github.kolunmi.Bazaar 
           - io.github.dvlv.boxbuddyrs
         
-  - type: script
-    snippets:
-      - "brew install yazi"
+  # - type: script
+  #   snippets:
+  #     - "brew install yazi"
 
   - type: yafti
     custom-flatpaks:
