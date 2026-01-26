@@ -145,6 +145,9 @@ modules:
       nerd-fonts:
         - JetBrainsMono
         - NerdFontsSymbolsOnly
+  - type: gschema-overrides
+    include:
+      - zz-ublue-niri.gschema.override
 
   - type: default-flatpaks
     configurations:
@@ -164,7 +167,6 @@ modules:
 
   - type: yafti
     custom-flatpaks:
-      - VLC: org.videolan.VLC
       - Zen-Browser: app.zen_browser.zen
       - clipboard-manager: com.github.hluk.copyq 
       - tauon-music-player: com.github.taiko2k.tauon-music-player
