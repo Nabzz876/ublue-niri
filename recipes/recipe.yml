@@ -29,7 +29,6 @@ modules:
     repos:
       cleanup: true
       copr:
-        - erikreider/swayosd
         - ublue-os/packages
         - solopasha/hyprland
       nonfree: rpmfusion
@@ -100,8 +99,7 @@ modules:
         - stow
         - swaybg
         - swayidle
-        #- swaylock 
-        - swayosd
+        #- swaylock
         - tailscale
         - tealdeer
         - toolbox
@@ -128,7 +126,6 @@ modules:
   - type: systemd
     system:
       enabled:
-        - swayosd-libinput-backend.service
         - podman.socket
         - sddm.service
     user:
@@ -156,6 +153,7 @@ modules:
         install:
           - com.github.tchx84.Flatseal
           - io.github.kolunmi.Bazaar 
+          - io.github.dvlv.boxbuddyrs
         
   # - type: script
   #   snippets:
@@ -164,9 +162,9 @@ modules:
   - type: yafti
     custom-flatpaks:
       - Zen-Browser: app.zen_browser.zen
-      - clipboard-manager: com.github.hluk.copyq 
+      - clipboard-manager: com.github.hluk.copyq
       - tauon-music-player: com.github.taiko2k.tauon-music-player
-      - pavucontrol: org.pulseaudio.pavucontrol  
+      - pavucontrol: org.pulseaudio.pavucontrol
       
 
   - type: signing 
