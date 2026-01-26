@@ -49,6 +49,7 @@ jobs:
           version: 43
           variant: sericea
           iso_name: ${{ github.event.repository.name }}-latest.iso
+          web_ui: true
     
 
       - name: Upload ISO as artifact
