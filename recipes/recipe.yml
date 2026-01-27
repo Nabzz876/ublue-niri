@@ -31,7 +31,7 @@ modules:
       copr:
         - ublue-os/packages
         - solopasha/hyprland
-        - lihaohong/yazi
+       # - lihaohong/yazi
       nonfree: rpmfusion
 
 
@@ -47,9 +47,6 @@ modules:
         # - desktop-backgrounds-compat # Wallpapers
         - desktop-backgrounds-basic
         - btop
-        - bat
-        - code
-        - copyq
         - curl
         - distrobox
         - fd-find
@@ -88,8 +85,6 @@ modules:
         - python3-pip
         - qt6ct
         - qt6-qtwayland
-        - qt6-qtsvg
-        - qt6-qtmultimedia
         - rclone
         - ripgrep
         - rofi
@@ -97,25 +92,21 @@ modules:
         - rustup
         - sddm
         - slurp
-        - sshfs
+        #- sshfs
         - stow
         - swaybg
         - swayidle
         #- swaylock
-        - tailscale
-        - tealdeer
         - toolbox
         - tuned-ppd
         - upower
         - uupd
         - waybar
         - wget
-        - wayvnc
         - wf-recorder
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
         - xwayland-satellite
-        - yazi
         - zoxide
         - zsh
 
