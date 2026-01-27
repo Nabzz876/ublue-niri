@@ -54,7 +54,7 @@ modules:
         - fuse-overlayfs # appimage support
         - fuzzel
         - fastfetch
-        - gcc
+       # - gcc
         - git
         - gnome-keyring
         - gnome-disk-utility
@@ -74,15 +74,15 @@ modules:
         - network-manager-applet
         - niri
         - nwg-wrapper
-        - neovim
+       # - neovim
         - pavucontrol
         - playerctlf
         - polkit
         - lxqt-policykit
         - powertop
         - ptyxis
-        - papirus-icon-theme
-        - python3-pip
+       # - papirus-icon-theme
+        #- python3-pip
         - qt6ct
         - qt6-qtwayland
         - rclone
