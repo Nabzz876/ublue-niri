@@ -1,6 +1,6 @@
 # ublue-niri &nbsp; [![bluebuild build badge](https://github.com/vorxiu/ublue-niri/actions/workflows/build.yml/badge.svg)](https://github.com/vorxiu/ublue-niri/actions/workflows/build.yml)
 
-A base niri image with some sane minimal configs 
+A base niri image with some sane minimal configs.
   
 ## Features
 
@@ -65,3 +65,6 @@ cosign verify --key cosign.pub ghcr.io/vorxiu/ublue-niri
 - [x] ntsync
 - [x] ~~ sddm theme ~~ lightDM
 - [X] bake some vscode extensions into the iso
+- [] Fix: Swaybg not automatically starting via systemD
+- [] hyprlock not reading the config from /etc/hypr/hyprlock
+- [] ISO for easy installation
