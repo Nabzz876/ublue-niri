@@ -46,6 +46,10 @@ modules:
         - bazaar # present in ublue copr
         - curl
         - distrobox
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - podman
         - fd-find
         - firewall-config
         - fuse-overlayfs # appimage support
@@ -127,6 +131,7 @@ modules:
       enabled:
         - podman.socket
         - lightdm.service
+        - docker.socket
     user:
       enabled:
         - waybar.service
@@ -145,8 +150,8 @@ modules:
     include:
       - zz-ublue-niri.gschema.override
     
-  - type: script
-    scripts:
-      - post_build.sh 
+  # - type: script
+  #   scripts:
+  #     - post_build.sh 
 
   - type: signing 
