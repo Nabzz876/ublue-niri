@@ -17,7 +17,6 @@ A base niri image with some sane minimal configs
 
 Full package list [here](https://github.com/Vorxiu/ublue-niri/blob/main/recipes/recipe.yml)
 
-## Installation
 
 ## Installation
 
